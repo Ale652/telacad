@@ -111,25 +111,25 @@ const Login = (props) => {
   >
     <Box
       style={{
-        width: "50%",
-        height: "240px",
+        width: "30%",
+        height: "100px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "20px",
+        padding: "10px",
         boxSizing: "border-box",
       }}
     >
 
-      <Grid container direction={"column"} spacing={5} style={{width: '200px'}}>
-        <Box style={{ fontSize: 20, fontWeight: "bold" }}>
+      <Grid container direction={"column"} spacing={5} style={{width: '100px'}}>
+        <Box style={{ fontSize: 10, fontWeight: "bold" }}>
           {" "}
           Sign IN:
         </Box>
 
         <TextField id="filled-basic" label="Email" variant="outlined" onChange={(event) => setEmail(event.target.value)} />
 
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+        <FormControl sx={{ m: 1, width: '15ch' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
           <Input
             id="standard-adornment-password"

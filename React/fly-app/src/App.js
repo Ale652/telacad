@@ -1,17 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from "./components/Home";
-import Login from "./components/login/Login";
-
-import Register from "./components/register/Register";
+import { useSelector } from "react-redux";
 
 function App() {
+ const loginState = useSelector((state) => state.login);
+
   return (
     <div className="App">
       <Home/>
-
-      <Login />
-      <Register />
 
     </div>
   );

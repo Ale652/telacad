@@ -138,18 +138,18 @@ const Register = (props) => {
     >
     <Box
       style={{
-        width: "50%",
-        height: "240px",
+        width: "30%",
+        height: "100px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "20px",
+        padding: "10px",
         boxSizing: "border-box",
       }}
     >
 
-      <Grid container direction={"column"} spacing={5} style={{width: '200px'}}>
-      <Box style={{ fontSize: 20, fontWeight: "bold" }}>
+      <Grid container direction={"column"} spacing={5} style={{width: '100px'}}>
+      <Box style={{ fontSize: 10, fontWeight: "bold" }}>
           {" "}
           Sign UP:
         </Box>
@@ -178,8 +178,8 @@ const Register = (props) => {
           </FormControl>
         </Box>
 
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+        <FormControl sx={{ m: 1, width: '15ch' }} variant="standard">
+          <InputLabel htmlFor="standard-adornment-password">Pass</InputLabel>
           <Input
             id="standard-adornment-password"
             required= {true}
@@ -200,8 +200,8 @@ const Register = (props) => {
           />
         </FormControl>
 
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Re-type Password</InputLabel>
+        <FormControl sx={{ m: 1, width: '15ch' }} variant="standard">
+          <InputLabel htmlFor="standard-adornment-password">Re-type Pass</InputLabel>
           <Input
             id="standard-adornment-password"
             required= {true}
