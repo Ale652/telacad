@@ -1,5 +1,7 @@
 package com.example.demo.entities;
 
+import java.util.Set;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -21,7 +23,7 @@ import lombok.ToString;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
     @Email
@@ -32,4 +34,12 @@ public class User {
     @NotNull
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @JoinTable(
+            name = "users_to_flys",
+            joinColumns = @JoinColumn(name = "id_user"),
+            inverseJoinColumns = @JoinColumn(name = "id_fly"))
+            private Set<Fly> zboruriPerUser;
+
 }
